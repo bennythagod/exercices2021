@@ -14,8 +14,7 @@ Notes
 Remember to sort the keys.
 */
 
-function keysAndValues( /*args*/ ) {
-  //your code
+function keysAndValues(arr) {
+    return [Object.keys(arr), Object.values(arr)];
 }
-
 exports.solution = keysAndValues;

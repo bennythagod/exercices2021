@@ -15,8 +15,16 @@ getBudgets([
 ]) ➞ 62600
 */
 
-function getBudgets( /*args*/ ) {
-  //your code
+function getBudgets(B) {
+    let counter = 0;
+    for (let i = 0; i < B.length; i++) {
+        counter = counter + B[i].budget;
+    }
+    return counter
 }
+
+getBudgets(
+    [{ name: "John", age: 21, budget: 29000 }], [{ name: "Steve", age: 32, budget: 32000 }], [{ name: "Martin", age: 16, budget: 1600 }],
+);
 
 exports.solution = getBudgets;

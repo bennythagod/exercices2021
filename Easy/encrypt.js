@@ -30,8 +30,27 @@ Notes
 All inputs are strings, no uppercases and all output must be strings.
 */
 
-function encrypt( /*args*/ ) {
-  //your code
+function encrypt(str) {
+    var strReturn = "";
+
+    for (var i = str.length - 1; i >= 0; i--) {
+        var actualLetter = str[i];
+
+        if (actualLetter == "a")
+            actualLetter = "0";
+        else if (actualLetter == "e")
+            actualLetter = "1";
+        else if (actualLetter == "i")
+            actualLetter = "2";
+        else if (actualLetter == "o")
+            actualLetter = "2";
+        else if (actualLetter == "u")
+            actualLetter = "3";
+
+        strReturn = strReturn + actualLetter;
+    }
+
+    return strReturn + "aca";
 }
 
 exports.solution = encrypt;

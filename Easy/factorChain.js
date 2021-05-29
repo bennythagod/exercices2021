@@ -18,8 +18,19 @@ factorChain([2, 4, 6, 7, 12]) ➞ false
 factorChain([10, 1]) ➞ false
 */
 
-function factorChain( /*args*/ ) {
-  //your code
+function factorChain(arr) {
+
+
+    for (var i = 1; i < arr.length; i++) {
+        var currentValue = arr[i];
+        var previousValue = arr[i - 1];
+
+        if (currentValue % previousValue > 0)
+            return false;
+    }
+
+
+    return true;
 }
 
 exports.solution = factorChain;
